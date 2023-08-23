@@ -31,7 +31,7 @@ const saveTodo = (text) => {
     todo.appendChild(editBtn);
 
     const deleteBtn = document.createElement("button");
-    deleteBtn.classList.add("remove-todo")
+    deleteBtn.classList.add("remove-todo");
     deleteBtn.innerHTML = '<i class="fa-solid fa-xmark"></i>';
     todo.appendChild(deleteBtn);
 
@@ -48,6 +48,23 @@ const toggleForms = () => {
 
 }
 
+const updateTodo = (text) => {
+
+    const todos = document.querySelectorAll(".todo");
+
+    todos.forEach((todo) => {
+
+        let todoTitle = todo.querySelector("h3");
+
+        console.log(todoTitle, text);
+
+        if(todoTitle.innerText === oldInputValue) {
+            todoTitle.innerText = text;
+        }
+    });
+
+};
+
 //Eventos
 
 todoForm.addEventListener("submit", (e) => {
@@ -56,8 +73,8 @@ todoForm.addEventListener("submit", (e) => {
     const inputValue = todoInput.value;
 
     if (inputValue) {
-        saveTodo(inputValue)
-    }
+        saveTodo(inputValue);
+    };
 });
 
 document.addEventListener("click", (e) => {
@@ -80,8 +97,8 @@ document.addEventListener("click", (e) => {
     if (targetEl.classList.contains("edit-todo")) {
         toggleForms();
 
-        editInput.value = todoTitle
-        oldInputValue = todoTitle
+        editInput.value = todoTitle;
+        oldInputValue = todoTitle;
     }
 })
 
@@ -89,5 +106,19 @@ cancelEditBtn.addEventListener("click", (e) => {
     e.preventDefault();
 
     toggleForms();
+})
+
+editForm.addEventListener("submit", (e) => {
+
+    e.preventDefault();
+
+    const editInputValue = editInput.value;
+
+    if(editInputValue) {
+        updateTodo(editInputValue);
+    }
+
+    toggleForms();
+
 })
 
