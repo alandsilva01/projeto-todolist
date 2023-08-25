@@ -81,7 +81,16 @@
             </div>
         </div>
     </div>
-    
+
+    <div class="conteudo">
+        <div class="relogio">
+            <h4>sexta, 25 de agosto de 2023 07:29:00</h4>
+        </div>
+        <span></span>
+        <span></span>
+    </div>
+
+    <!--Script Efeito Card-->
     <script type="text/javascript" src="js/raw.githubusercontent.com_micku7zu_vanilla-tilt.js_master_dist_vanilla-tilt.js"></script>
     <script>
         VanillaTilt.init(document.querySelectorAll(".todo-container"), {
@@ -89,6 +98,15 @@
             speed: 500,
             
         });
+
+        VanillaTilt.init(document.querySelectorAll(".conteudo"), {
+            max: 10,
+            speed: 500,
+            glare: true,
+            "max-glare": 0.5,
+        });
+
+        
     </script>
 </body>
 </html>
