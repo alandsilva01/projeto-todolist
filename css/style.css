@@ -235,6 +235,14 @@ header > h1 {
 
 @media (max-width: 480px) {
 
+    body {
+        background-image: url(../img/mulher-fazendo-anotacoes-em-um-bloco-de-notas.jpg);
+        background-position: 60%;
+        background-size: cover; 
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+    }
+
     .todo-container, .conteudo {
         width: 90vw;
     }
