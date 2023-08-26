@@ -84,7 +84,7 @@
 
     <div class="conteudo">
         <div class="relogio">
-            <h4>sexta, 25 de agosto de 2023 07:29:00</h4>
+            <h4 class="js-data"></h4>
         </div>
         <span></span>
         <span></span>
@@ -100,13 +100,14 @@
         });
 
         VanillaTilt.init(document.querySelectorAll(".conteudo"), {
-            max: 10,
-            speed: 500,
+            max: 20,
+            speed: 600,
             glare: true,
             "max-glare": 0.5,
         });
 
         
     </script>
+    <script src="./js/relogio.js"></script>
 </body>
 </html>

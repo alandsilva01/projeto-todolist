@@ -187,26 +187,21 @@ header > h1 {
 
 }
 
+/*Relogio*/
+
 .conteudo {
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.288), rgba(255, 255, 255, 0.192));
     backdrop-filter: blur(1px);
     -webkit-backdrop-filter: blur(1px);
-    border: 1px solid rgba(0, 0, 0, 0.18);
+    border: 1px solid rgba(0, 0, 0, 0.288);
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
     max-width: 450px;
     height: 130px;
     border-radius: 10px;
     position: relative;
+    margin: 0 auto;
     z-index: 999;
-    animation: coresDancantes 3s linear infinite;
 
-}
-
-@keyframes coresDancantes {
-    100% {
-        filter: hue-rotate(360deg);
-    }
-   
 }
 
 .conteudo .relogio,
@@ -218,7 +213,7 @@ header > h1 {
 }
 
 .conteudo .relogio {
-    background: linear-gradient(135deg, rgba(0, 0, 0, 0.288), rgba(0, 0, 0, 0.192));
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.288), rgba(0, 0, 0, 0.425));
     backdrop-filter: blur(1px);
     -webkit-backdrop-filter: blur(1px);
     width: 430px;
@@ -227,13 +222,13 @@ header > h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    -webkit-box-reflect: below 50px linear-gradient(transparent, var(var(--cor-reflexo)));
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     
 }
 
 .conteudo .relogio h4 {
-    background: linear-gradient(to left, var(--cores-cyberpunk));
+    background: white;
+    text-align: center;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
