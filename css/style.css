@@ -232,3 +232,15 @@ header > h1 {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
+@media (max-width: 480px) {
+
+    .todo-container, .conteudo {
+        width: 90vw;
+    }
+
+   .conteudo .relogio {
+        width: 80vw;
+    }
+
+}
